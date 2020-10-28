@@ -18,18 +18,20 @@ android {
   }
 
   compileOptions {
+    coreLibraryDesugaringEnabled true
     sourceCompatibility JavaVersion.VERSION_1_8
     targetCompatibility JavaVersion.VERSION_1_8
   }
 }
 
 dependencies {
+  coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.0.10'
   // You should use the commented out line below in you're application.
   // We depend on the source directly here so that development is easier.
   implementation project(':library')
   //compile 'com.prolificinteractive:material-calendarview:1.4.3'
 
-  implementation rootProject.ext.threeTenAbp
+//  implementation rootProject.ext.threeTenAbp
   implementation rootProject.ext.supportAppCompat
   implementation rootProject.ext.recyclerviewV7
   implementation rootProject.ext.butterknife
